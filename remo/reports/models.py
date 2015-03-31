@@ -312,6 +312,7 @@ def create_passive_attendance_report(sender, instance, **kwargs):
                                         instance.event.region,
                                         instance.event.country),
             'is_passive': True,
+            'country': instance.event.country,
             'link': get_event_link(instance.event),
             'activity_description': instance.event.description}
 
@@ -334,6 +335,7 @@ def create_update_passive_event_report(sender, instance, created, **kwargs):
                                     instance.region,
                                     instance.country),
         'link': get_event_link(instance),
+        'country': instance.country,
         'activity_description': instance.description}
 
     if created:
