@@ -18,7 +18,7 @@ from remo.base.utils import (add_permissions_to_groups,
                              get_object_or_none)
 from remo.base.models import GenericActiveManager
 from remo.base.tasks import send_remo_mail
-from remo.base.utils import daterange, get_date
+from remo.base.utils import daterange, get_date, get_object_or_none
 from remo.events.models import Attendance as EventAttendance, Event
 from remo.profiles.models import FunctionalArea
 from remo.reports import (ACTIVITY_CAMPAIGN, ACTIVITY_EVENT_ATTEND,
