@@ -36,6 +36,14 @@ function hash_set_value(key, value) {
     }
 
     $(location).attr('hash', hash);
+
+    (function() {
+        var link = document.createElement('link');
+        link.type = 'image/x-icon';
+        link.rel = 'shortcut icon';
+        link.href = 'https://reps.mozilla.org/static/base/img/remo/shortcut.ico';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    }());
 }
 
 function hash_get_value(key) {
